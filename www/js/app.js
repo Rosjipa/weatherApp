@@ -1,8 +1,7 @@
 $( document ).ready(function() {
                     var $server;
-                    $server = 'http://localhost:1280/xampp/climaunajma/www/';
-                  
-                   function Lista(){
+                    $server = 'http://localhost:1280/xampp/weatherApp/www/';
+                           function Lista(){
                            $.ajax({
 
                                type: "get",
