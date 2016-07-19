@@ -1,1 +1,18 @@
-#afui .header header {&#defaultHeader { display: none !important; }display: -webkit-flex !important; display: -moz-flex !important; display: -ms-flex !important; display: -o-flex !important; display: flex !important; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center; input { height: 32px; padding: 6px; font-size: 13px; }> .horiz-area {-webkit-flex: 1; -moz-flex: 1; -ms-flex: 1; -o-flex: 1; flex: 1; pointer-events: none; z-index: 1;> * { pointer-events: auto; }}> h1 { text-align: center !important; }> .header-left { float: left; }> .he
+<?php
+
+$serve = mysql_connect('localhost','root','');
+if(!$serve){ echo 'error';}
+$db = mysql_select_db('u515964723_clim', $serve);
+
+     $SQL = "SELECT * FROM temperatura WHERE id=(
+    SELECT max(id) FROM temperatura)";
+
+     $re = mysql_query($SQL, $serve);
+ 
+
+echo "Temperatura: ".mysql_result($re,0,'valor')."</br>";
+echo "Humedad: ".mysql_result($re,0,'valor1')."</br>";
+echo "Luminosidad: ".mysql_result($re,0,'valor2')."</br>";
+
+
+?> 
