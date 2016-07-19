@@ -1,25 +1,34 @@
-/*
- * Please see the included README.md file for license terms and conditions.
- */
+$( document ).ready(function() {
+                    var $server;
+                    $server = 'http://localhost:1280/xampp/weatherApp/www';
+                  
+                   function Lista(){
+                           $.ajax({
 
+                               type: "get",
+                               dataType  : 'html',
+                               url: $server+"/conecta1.php",
+                               data: "clima",
+                               success: function(data) {
+                                    $('#clima').html(data);
+                                }
+                           });
+                    }
+                 function Hora(){
+                           $.ajax({
 
-// This file is a suggested starting place for your code.
-// It is completely optional and not required.
-// Note the reference that includes it in the index.html file.
+                               type: "get",
+                               dataType  : 'html',
+                               url: $server+"/hora.php",
+                               data: "hora",
+                               success: function(data) {
+                                    $('#hora').html(data);
+                                }
+                           });
+                    }
+                 
+                 Hora();
+                 Lista();
 
+            });
 
-/*jslint browser:true, devel:true, white:true, vars:true */
-/*global $:false, intel:false app:false, dev:false, cordova:false */
-
-
-
-// This file contains your event handlers, the center of your application.
-// NOTE: see app.initEvents() in init-app.js for event handler initialization code.
-
-// function myEventHandler() {
-//     "use strict" ;
-// // ...event handler code here...
-// }
-
-
-// ...additional event handlers here...
