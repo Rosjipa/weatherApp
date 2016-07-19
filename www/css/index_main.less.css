@@ -1739,3 +1739,11 @@ body#afui .splt {
     width: auto !important;
   }
 }
+@media all {
+  
+}
+@media all {
+  #afui .rpe {
+    color: #ff00ff;
+  }
+}
