@@ -10,8 +10,8 @@ $db = mysql_select_db('u515964723_clim', $serve);
      $re = mysql_query($SQL, $serve);
  
 
-echo "Temperatura: ".mysql_result($re,0,'valor')."</br>";
-echo "Humedad: ".mysql_result($re,0,'valor1')."</br>";
+echo "Temperatura: ".mysql_result($re,0,'valor')."°C"."</br>";
+echo "Humedad: ".mysql_result($re,0,'valor1')."%"."</br>";
 echo "Luminosidad: ".mysql_result($re,0,'valor2')."</br>";
 
 
