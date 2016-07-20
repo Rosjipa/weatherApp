@@ -26,9 +26,34 @@ $( document ).ready(function() {
                                 }
                            });
                     }
-                 
-                 Hora();
-                 Lista();
+                   function imagen(){
+                           $.ajax({
+
+                               type: "get",
+                               dataType  : 'html',
+                               url: $server+"/grafico.php",
+                               data: "imge",
+                               success: function(data) {
+                                    $('#imge').html(data);
+                                }
+                           });
+                    }
+                     function comparar1(){
+                           $.ajax({
+
+                               type: "get",
+                               dataType  : 'html',
+                               url: $server+"/comparar.php",
+                               data: "compara",
+                               success: function(data) {
+                                    $('#compara').html(data);
+                                }
+                           });
+                    }
+                comparar1()
+                imagen();
+                Hora();
+                Lista();
 
             });
 
