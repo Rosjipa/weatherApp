@@ -1,6 +1,7 @@
 $( document ).ready(function() {
                     var $server;
-                    $server = 'http://localhost:1280/xampp/climaunajma/www/';
+                    $server = 'http://localhost:8080/weatherApp/www/';
+  
                   
                    function Lista(){
                            $.ajax({
@@ -8,9 +9,9 @@ $( document ).ready(function() {
                                type: "get",
                                dataType  : 'html',
                                url: $server+"/conecta.php",
-                               data: "mostrarclima",
+                               data: "hola",
                                success: function(data) {
-                                    $('#listaclima').html(data);
+                                    $('#hola').html(data);
                                 }
                            });
                     }
