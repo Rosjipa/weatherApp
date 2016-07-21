@@ -38,7 +38,7 @@
 
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
-
+        <link rel="stylesheet" href="css/estilo.css">
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
@@ -84,34 +84,18 @@
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-        <div class="upage view img" id="mainpage" data-header="af-header-0" data-footer="none">
+        <div class="contenedor" id="mainpage" data-header="af-header-0" data-footer="none">
             <header class="container-group outer-element uib_w_1" data-uib="app_framework/header" data-ver="3" id="af-header-0">
                 <h1><marquee>ClimaUnajma</marquee></h1>
-                <div class="widget-container wrapping-col single-centered"></div>
-                <div class="widget-container content-area horiz-area wrapping-col header-left"></div>
-                <div class="widget-container content-area horiz-area wrapping-col header-right"></div>
             </header>
               <h1><p style="text-align:center">Fecha</p></h1>
-    <p style="text-align:center" id="horaclima"></p>
-            
-            <div class="pages">
-                <div class="upage-content ac0 content-area vertical-col left panel" id="page_15_90">
-                    <div class="table-thing with-label widget uib_w_2 d-margins" data-uib="app_framework/input" data-ver="2">
-                        <input class="wide-control" type="date">
-                    </div>
-                    
-                    <a href="#pagina2" class="ui-btn ui-btn-corner-all">MostrarR</a>
+              <p style="text-align:center" id="horaclima"></p>
+			<div class="main">
+              <div class="temp" id="CambiarFondo"></div>			                                 
                     <h1><p style="text-align:center">Temperatura Actual</p></h1>
-    <p style="text-align:center" id="listaclima"></p>
-                                     
-                </div>
-                <div data- role="page" id="pagina2">
-               
-                    <div>
-                    <div data- role="main" class="ui-content"></div>
-                    </div>
-                </div>
-            </div>
+                    <p style="text-align:center" id="listaclima"></p>                         
+                
+			</div>
         </div>
     </body>
 
