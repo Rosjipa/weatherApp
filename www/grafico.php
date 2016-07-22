@@ -8,7 +8,7 @@ $SQL = "SELECT * FROM temperatura WHERE timestamp='$fecha'";
  
 
 $t=mysql_result($re,0,'valor')."</br>";
- if($t>10)
+ if($t>=15)
  {
      echo "<img src='img/soleado.PNG' width='110' height='110' style=' border-radius:20px '>"."</br>";
      echo "Soleado";
