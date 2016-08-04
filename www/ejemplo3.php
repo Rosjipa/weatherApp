@@ -1,7 +1,6 @@
 <?php
 
 include "conectabd.php";
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -28,7 +27,7 @@ $(function () {
 date_default_timezone_set("America/Bogota");
 $hoy= date('Y-m-d');
 $ayer3= date('Y-m-d', strtotime('-2 day'));
-$sql=mysql_query("select * from temperatura where timestamp>='$ayer3' and timestamp<='$hoy'  ");
+$sql=mysql_query("select * from temperatura");
 while($res=mysql_fetch_array($sql)){			
 ?>
 			
@@ -81,7 +80,7 @@ while($res=mysql_fetch_array($sql)){
             name: 'Temperatura',
             data: [
 			<?php
-$sql=mysql_query("select * from temperatura where timestamp>='$ayer3' and timestamp<='$hoy'  ");
+$sql=mysql_query("select * from temperatura");
 while($res=mysql_fetch_array($sql)){			
 ?>			
 			[<?php echo $res['valor'] ?>],
@@ -96,9 +95,9 @@ while($res=mysql_fetch_array($sql)){
 });
 		</script>
 	</head>
-	<body>     
-<script src="Highcharts-4.1.5/js/highcharts.js"></script>
-<script src="Highcharts-4.1.5/js/modules/exporting.js"></script> 
+	<body>
+<script src="Highcharts-4.1.5/js/highcharts.js"></script>        
+<script src="Highcharts-4.1.5/js/modules/exporting.js"></script>
 
 <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
 <br><br>

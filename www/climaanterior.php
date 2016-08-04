@@ -4,10 +4,10 @@ include "conectabd.php";
 $ayer1= date('Y-m-d', strtotime('-1 day'));
 $ayer2= date('Y-m-d', strtotime('-2 day'));
 $ayer3= date('Y-m-d', strtotime('-3 day'));
-
-    $SQL1 = "SELECT * FROM temperatura WHERE timestamp='$ayer1' ";
-    $SQL2 = "SELECT * FROM temperatura WHERE timestamp='$ayer2' ";
-    $SQL3 = "SELECT * FROM temperatura WHERE timestamp='$ayer3' ";
+	
+    $SQL1 = "SELECT * FROM temperatura WHERE timestamp='2016/07/31' ";
+    $SQL2 = "SELECT * FROM temperatura WHERE timestamp='2016/07/30' ";
+    $SQL3 = "SELECT * FROM temperatura WHERE timestamp='2016/07/29' ";
 
      $re1 = mysql_query($SQL1, $serve);
      $re2 = mysql_query($SQL2, $serve);
@@ -18,7 +18,8 @@ $ayer3= date('Y-m-d', strtotime('-3 day'));
    <center>
    <table width="300" border="0">
     <tr>
-      <td width="100"><?php
+      <td width="100">
+		  <?php
 $t=mysql_result($re1,0,'valor');
 if($t>=15)
 {

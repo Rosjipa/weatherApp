@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "20056838-eeee-49c4-a136-a8fe14e9abe8",
-      "lastModifiedDate": 1468617238287,
+      "lastModifiedDate": 1469917101643,
       "creationDate": 1468616759097
     },
     "XDK-app-designer": "true",
@@ -88,11 +88,12 @@
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "21",
           "android-installLocation": "auto",
-          "android-signed": true
+          "android-signed": false,
+          "Fullscreen": false
         },
         "isActive_": true,
         "appName_": "climaunajma",
-        "appID_": "xdk.intel.blank.ad.template.crosswalk",
+        "appID_": "unajma.weather_App",
         "appAccess_": {
           "mode": "whitelist",
           "network": [
@@ -107,7 +108,8 @@
             "geo:*",
             "market:*"
           ],
-          "navigation": []
+          "navigation": [],
+          "properties": {}
         },
         "icons_": [],
         "splashes_": [],
@@ -117,8 +119,8 @@
         "cordovaCLIVersion_": "5.4.1",
         "crosswalkVersion_": "16",
         "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK",
-        "appDescription_": "Template to develop a Cordova mobile web app using the App Designer UI editor.",
+        "appAuthor_": "JRY",
+        "appDescription_": "mide la temperatura de la unajma ",
         "appVersionCode_": "1"
       },
       "iOS": {

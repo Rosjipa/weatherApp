@@ -1,11 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor1{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
 body
 {
     background-color:#23A0D8;
     font-family:"Helvetica",Arial;
+	
 }#contenido
 {
     text-align: center;
-    
+
 }
 h1
 {
