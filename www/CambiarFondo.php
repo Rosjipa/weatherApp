@@ -7,8 +7,17 @@ $db = mysql_select_db('u515964723_clim', $serve);
     SELECT max(id) FROM temperatura)";
 
      $re = mysql_query($SQL, $serve);
- 
-echo "Temperatura: ".mysql_result($re,0,'valor')."</br>";
-echo "Humedad: ".mysql_result($re,0,'valor1')."</br>";
-echo "Luminosidad: ".mysql_result($re,0,'valor2')."</br>";
+     $temp=mysql_result($re,0,"valor");
+if($temp<20)
+{
 ?> 
+<img src="imagen/nublado_sol.jpg">
+<?php
+}
+else
+{
+?>
+<img src="imagen/soleado.jpg">
+<?php
+}
+?>
