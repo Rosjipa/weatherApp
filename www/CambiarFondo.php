@@ -8,16 +8,16 @@ $db = mysql_select_db('u515964723_clim', $serve);
 
      $re = mysql_query($SQL, $serve);
      $temp=mysql_result($re,0,"valor");
-if($temp<20)
+if($temp>17)
 {
-?> 
-<img src="imagen/nublado_sol.jpg">
-<?php
+echo "<img src='imagen/soleado.jpg' width='300' height='320' style='border-radius:20px'>";
 }
 else
 {
-?>
-<img src="imagen/soleado.jpg">
-<?php
+	if($temp<=17 and $temp>=13)
+	  echo "<img src='imagen/nublado_sol.jpg' width='300' height='320' style='border-radius:20px'>";
+	if($temp<13)
+	  echo "<img src='imagen/nublado.jpg' width='300' height='320' style='border-radius:20px'>";
 }
+
 ?>

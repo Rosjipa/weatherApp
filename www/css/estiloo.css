@@ -12,24 +12,8 @@ header h1{
     margin: 0 auto;
     overflow: hidden;
 }
-.main{
-    width: 100%;
-    height: 100%;
-	background-color: darkgrey;
-}
-.main img{
-	width: 100%;
-    height: 40%;
-}
-.temp{
-    top: 5%;
-    width: 100%;
-    height: 80%;
-	left: 10%;
-}
-
 body{
-    background-image: url("../img/fondor.jpg");
+   background-color:darkgray;
 }
 
 button {
