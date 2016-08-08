@@ -1,6 +1,6 @@
 $( document ).ready(function() {
                     var $server;
-                    $server = 'http://climaunajma.esy.es';              
+                    $server = 'http://localhost:1280/xampp/weatherApp/www/';              
 	             function hora(){
                            $.ajax({
 

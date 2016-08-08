@@ -1,5 +1,5 @@
 <?php
-include "conecta.php";
+include "conectabd.php";
 
      $SQL = "SELECT * FROM temperatura WHERE id=(
     SELECT max(id) FROM temperatura)";
@@ -15,18 +15,18 @@ $t=mysql_result($re,0,'valor');
 	  <tr>                
        <td>
           <?php 
-          if($t>=20)
+          if($t>=17)
           {
              echo "<img src='img/bebida_calor.jpg' width='300' height='450' style=' border-radius:20px '>"."</br>";
     
           }
-		   else if($t<20 and $t>14)
+		   else if($t>=13 and $t<=17)
 		   {
               echo "<img src='img/bebida.jpg' width='300' height='450' style=' border-radius:20px '>"."</br>";                        
            }
-		   else if($t<=13)
+		   else if($t<13)
            {
-               echo "<img src='img/bebida_fria.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>"; 
+               echo "<img src='img/bebida_frio.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>"; 
            }
                     
             ?>

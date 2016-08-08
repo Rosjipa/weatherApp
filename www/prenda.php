@@ -1,6 +1,6 @@
 <?php
 
-include "conecta.php";
+include "conectabd.php";
 
      $SQL = "SELECT * FROM temperatura WHERE id=(
     SELECT max(id) FROM temperatura)";
@@ -22,16 +22,16 @@ $t=mysql_result($re,0,'valor');
        <td>Accesorio(s)</td>
        <td>
           <?php 
-          if($t>=20)
+          if($t>17)
           {
              echo "<img src='img/accesorio_calor_mujer.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";
     
           }
-		   else if($t<20 and $t>14)
+		   else if($t>=13 and $t<=17)
 		   {
               echo "<img src='img/accesorio_mujer.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";                        
            }
-		   else if($t<=13)
+		   else if($t<13)
            {
                echo "<img src='img/accesorio_frio_mujer.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>"; 
            }
@@ -40,18 +40,18 @@ $t=mysql_result($re,0,'valor');
         </td> 
 	    <td>
           <?php 
-          if($t>=20)
+          if($t>17)
           {
              echo "<img src='img/accesorio_calor_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";
     
           }
-		   else if($t<20 and $t>14)
+		   else if($t>=13 and $t<=17)
 		   {
               echo "<img src='img/accesorio_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";                        
            }
-		   else if($t<=13)
+		   else if($t<13)
            {
-               echo "<img src='img/accesorio_frio_' width='150' height='150' style=' border-radius:20px '>"."</br>"; 
+               echo "<img src='img/accesorio_frio_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>"; 
            }
                     
             ?>
@@ -66,7 +66,7 @@ $t=mysql_result($re,0,'valor');
              echo "<img src='img/prenda_calor_mujer.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";
     
           }
-		   else if($t<=17 and $t>=14)
+		   else if($t>=13 and $t<=17)
 		   {
               echo "<img src='img/prenda_mujer.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";                        
            }
@@ -79,16 +79,16 @@ $t=mysql_result($re,0,'valor');
         </td> 
 		<td>
           <?php 
-          if($t>=20)
+          if($t>17)
           {
              echo "<img src='img/prenda_calor_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";
     
           }
-		   else if($t<20 and $t>14)
+		   else if($t>=13 and $t<=17)
 		   {
               echo "<img src='img/prenda_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";                        
            }
-		   else if($t<=13)
+		   else if($t<13)
            {
                echo "<img src='img/prenda_frio_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>"; 
            }
@@ -100,16 +100,16 @@ $t=mysql_result($re,0,'valor');
        <td>Calzado(s)</td>
        <td>
           <?php 
-          if($t>=20)
+          if($t>17)
           {
              echo "<img src='img/zapato_calor_mujer.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";
     
           }
-		   else if($t<20 and $t>14)
+		   else if($t>=13 and $t<=17)
 		   {
               echo "<img src='img/calzado_mujer.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";                        
            }
-		   else if($t<=13)
+		   else if($t<13)
            {
                echo "<img src='img/calzado_frio_mujer.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>"; 
            }
@@ -118,16 +118,16 @@ $t=mysql_result($re,0,'valor');
         </td> 
 		<td>
           <?php 
-          if($t>=20)
+          if($t>17)
           {
              echo "<img src='img/zapato_calor_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";
     
           }
-		   else if($t<20 and $t>14)
+		   else if($t>=13 and $t<=17)
 		   {
               echo "<img src='img/calzado_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>";                        
            }
-		   else if($t<=13)
+		   else if($t<13)
            {
                echo "<img src='img/calzado_frio_varon.jpg' width='150' height='150' style=' border-radius:20px '>"."</br>"; 
            }
